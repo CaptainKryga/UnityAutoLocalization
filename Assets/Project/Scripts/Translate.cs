@@ -57,10 +57,10 @@ namespace CaptainKryga.Localization
                 _collection.Clear();
                 GetDirectory(new DirectoryInfo(Application.dataPath));
 
-                foreach (var temp in _collection)
-                {
-                    Debug.Log(temp);
-                }
+                // foreach (var temp in _collection)
+                // {
+                //     Debug.Log(temp);
+                // }
             }
         }
 
