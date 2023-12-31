@@ -7,15 +7,15 @@ namespace UnityLocalization
 {
 	public class Window : EditorWindow
 	{
-		private StringTableCollection[] _stc;
+		//array tables
+		private StringTableCollection[] _tables;
 
-		private GUIContent _content;
-
+		//lang selected bools
 		private bool[] _boolLang = new bool[256];
 		
-		int _selectedStc, _selectedLang;
-		private bool _showBtn;
-		private string _defaultLang;
+		//selected table and default lang
+		int _selectedTable, _selectedLang;
+
 		
 		[MenuItem("Window/UnityLocalization")]
 		public static void ShowWindow()
@@ -33,37 +33,37 @@ namespace UnityLocalization
 		{
 			//1 лейбл
 			GUILayout.Label("Auto Translate", EditorStyles.boldLabel);
-			_stc = GetData.GetAllStringTableCollection();
+			_tables = GetData.GetAllStringTableCollection();
 
 			//2 update get all string table collections
 			if (GUILayout.Button("Update List Localization Table's"))
 			{
 				Debug.Log("Update");
-				_stc = GetData.GetAllStringTableCollection();
+				_tables = GetData.GetAllStringTableCollection();
 			}
 			
 			//3 dropdown list string table collection
 			List<string> options = new List<string>();
-			for (int x = 0; x < _stc.Length; x++)
+			for (int x = 0; x < _tables.Length; x++)
 			{
-				options.Add(_stc[x].TableCollectionName);
+				options.Add(_tables[x].TableCollectionName);
 			}
-			_selectedStc = EditorGUILayout.Popup("String Table Collection", _selectedStc, options.ToArray());
+			_selectedTable = EditorGUILayout.Popup("String Table Collection", _selectedTable, options.ToArray());
 			
 			//4 dropdown default language setup table
 			List<string> options2 = new List<string>();
-			for (int x = 0; x < _stc[_selectedStc].StringTables.Count; x++)
+			for (int x = 0; x < _tables[_selectedTable].StringTables.Count; x++)
 			{
-				string code = _stc[_selectedStc].StringTables[x].LocaleIdentifier.Code.ToUpper();
+				string code = _tables[_selectedTable].StringTables[x].LocaleIdentifier.Code.ToUpper();
 				options2.Add(code);
 			}
 			_selectedLang = EditorGUILayout.Popup("Default Language", _selectedLang, options2.ToArray());
 
 			//5 setup selected list bool lang
 			// _boolLang = new bool[_stc[_selectedStc].StringTables.Count];
-			for (int x = 0; x < _stc[_selectedStc].StringTables.Count; x++)
+			for (int x = 0; x < _tables[_selectedTable].StringTables.Count; x++)
 			{
-				string code = _stc[_selectedStc].StringTables[x].LocaleIdentifier.Code.ToUpper();
+				string code = _tables[_selectedTable].StringTables[x].LocaleIdentifier.Code.ToUpper();
 				if (x == _selectedLang)
 				{
 					GUILayout.Label(code, EditorStyles.boldLabel);
@@ -78,6 +78,8 @@ namespace UnityLocalization
 			if (GUILayout.Button("Translate"))
 			{
 				Debug.Log("Translate");
+				
+				Translate.TranslateTable(_tables[_selectedTable]);
 			}
 		}
 	}
