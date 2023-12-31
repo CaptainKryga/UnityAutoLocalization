@@ -79,7 +79,7 @@ namespace UnityLocalization
 			{
 				Debug.Log("Translate");
 				
-				Translate.TranslateTable(_tables[_selectedTable]);
+				Translate.TranslateTable(_tables[_selectedTable], _boolLang, _selectedLang);
 			}
 		}
 	}
