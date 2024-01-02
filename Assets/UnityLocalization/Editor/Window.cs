@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEditor.Localization;
 using UnityEngine;
 
-namespace UnityLocalization
+namespace UnityLocalization.Editor
 {
 	public class Window : EditorWindow
 	{

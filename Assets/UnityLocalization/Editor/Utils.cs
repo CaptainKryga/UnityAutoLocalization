@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace UnityLocalization
+namespace UnityLocalization.Editor
 {
 	public static class Utils
 	{

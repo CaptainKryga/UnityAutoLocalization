@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEditor.Localization;
 using UnityEngine;
 
-namespace UnityLocalization
+namespace UnityLocalization.Editor
 {
 	public static class GetData
 	{

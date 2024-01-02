@@ -1,8 +1,9 @@
 using System.Net;
-using System.Web;
+using Codice.Utils;
 using UnityEditor.Localization;
+using UnityEngine;
 
-namespace UnityLocalization
+namespace UnityLocalization.Editor
 {
 	public static class Translate
 	{
@@ -26,10 +27,12 @@ namespace UnityLocalization
 						continue;
 					
 					string lang = table.StringTables[x2].LocaleIdentifier.Code;
+
+					string word = table.StringTables[defLang][key].LocalizedValue.Replace("\n", " ");
 					
 					string result = Utils.ParseJson(TranslateWord(table.StringTables[defLang].LocaleIdentifier.Code, 
-						lang, table.StringTables[defLang][key].LocalizedValue));
-					
+						lang, word));
+
 					if (table.StringTables[x2][key] != null)
 					{
 						table.StringTables[x2][key].Value = result;
@@ -44,6 +47,7 @@ namespace UnityLocalization
 		
 		private static string TranslateWord(string fromLang, string toLang, string word)
 		{
+			Debug.Log(word);
 			var url = $"https://translate.googleapis.com/translate_a/single?client=gtx&sl={fromLang}&tl={toLang}&dt=t&q={HttpUtility.UrlEncode(word)}";
 			var webClient = new WebClient
 			{
@@ -53,6 +57,7 @@ namespace UnityLocalization
 			var result = webClient.DownloadString(url);
 			try
 			{
+				Debug.Log(result);
 				return result;
 			}
 			catch
