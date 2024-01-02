@@ -7,7 +7,7 @@ namespace UnityLocalization.Editor
 {
 	public static class Translate
 	{
-		public static void TranslateTable(StringTableCollection table, bool[] langs, int defLang)
+		public static void TranslateTable(StringTableCollection table, bool[] langs, int defLang, bool @override)
 		{
 			// int maxKeys = table.StringTables[0].Values.Count; 
 			// Debug.Log(maxKeys);
@@ -21,9 +21,15 @@ namespace UnityLocalization.Editor
 				
 				for (int x2 = 0; x2 < table.StringTables.Count; x2++)
 				{
+					//if deflang no data
 					if ((!langs[x2] && x2 != defLang) || x2 == defLang || 
 						table.StringTables[defLang][key] == null ||
 						table.StringTables[defLang][key].LocalizedValue == "") 
+						continue;
+					
+					//if be data
+					if (!@override && table.StringTables[x2][key] != null &&
+						table.StringTables[x2][key].LocalizedValue != "")
 						continue;
 					
 					string lang = table.StringTables[x2].LocaleIdentifier.Code;

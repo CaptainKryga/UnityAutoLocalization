@@ -16,6 +16,9 @@ namespace UnityLocalization.Editor
 		//selected table and default lang
 		int _selectedTable, _selectedLang;
 
+		//override data
+		private bool @override;
+
 		
 		[MenuItem("Window/UnityLocalization")]
 		public static void ShowWindow()
@@ -59,6 +62,9 @@ namespace UnityLocalization.Editor
 			}
 			_selectedLang = EditorGUILayout.Popup("Default Language", _selectedLang, options2.ToArray());
 
+			@override = EditorGUILayout.Toggle("Override?", @override);
+
+			
 			//5 setup selected list bool lang
 			// _boolLang = new bool[_stc[_selectedStc].StringTables.Count];
 			for (int x = 0; x < _tables[_selectedTable].StringTables.Count; x++)
@@ -79,7 +85,7 @@ namespace UnityLocalization.Editor
 			{
 				Debug.Log("Translate");
 				
-				Translate.TranslateTable(_tables[_selectedTable], _boolLang, _selectedLang);
+				Translate.TranslateTable(_tables[_selectedTable], _boolLang, _selectedLang, @override);
 			}
 		}
 	}
