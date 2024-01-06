@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace UnityLocalization.Editor
 {
-	public class Window : EditorWindow
+	public class UnityAutoLocalization : EditorWindow
 	{
 		//array tables
 		private StringTableCollection[] _tables;
@@ -23,7 +23,7 @@ namespace UnityLocalization.Editor
 		[MenuItem("Window/UnityLocalization")]
 		public static void ShowWindow()
 		{
-			EditorWindow.GetWindow(typeof(Window));
+			EditorWindow.GetWindow(typeof(UnityAutoLocalization));
 		}
 		
 		//dropdown tables
