@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Strings_tr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: tr
+  m_SharedData: {fileID: 11400000, guid: 873b2ceee5e6b7644af32f8fc74cf6cc, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 4989550304630407198
+  m_TableData:
+  - m_Id: 35561877504
+    m_Localized: 
+    m_Metadata:
+      m_Items:
+      - rid: 4989550304630407198
+  - m_Id: 76078854144
+    m_Localized: "Unity Otomatik Yerelle\u015Ftirme \U0001F30E\nUyumluluk Birli\u011Fi
+      2022.3.16f1 veya y\xFCksek\nBu ara\xE7, \xFCcretsiz Google \xE7evirmenleri
+      ve Unity yerelle\u015Ftirmesi kullanarak oyunu di\u011Fer dillere \xE7evirmenizi
+      sa\u011Flar.\nNereden ba\u015Flamal\u0131?\nEklenti, ba\u011Flant\u0131y\u0131
+      kullanarak Unity Paket Y\xF6neticisi'nden alabilirsiniz:\n\u015Eu anda mevcut
+      olan i\u015Flevler:\nDize tablolar\u0131nda kelimelerin ve ak\u0131ll\u0131
+      kelimelerin \xE7evirisi;"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 137651236864
+    m_Localized: Kryga denis aka captainkryga
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 4989550304630407198
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 0030a74708000000

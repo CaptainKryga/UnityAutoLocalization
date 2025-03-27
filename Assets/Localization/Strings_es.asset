@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Strings_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 873b2ceee5e6b7644af32f8fc74cf6cc, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 4989550304630407197
+  m_TableData:
+  - m_Id: 35561877504
+    m_Localized: 
+    m_Metadata:
+      m_Items:
+      - rid: 4989550304630407197
+  - m_Id: 76078854144
+    m_Localized: "Localizaci\xF3n autom\xE1tica de Unity \U0001F30E\nUnidad de compatibilidad
+      2022.3.16f1 o alta\nEsta herramienta le permite traducir el juego a otros idiomas,
+      utilizando traductores de Google gratuitos y localizaci\xF3n de la unidad.\n\xBFPor
+      d\xF3nde empezar?\nPuede obtener el complemento a trav\xE9s del Administrador
+      de paquetes Unity utilizando el enlace:\nFunciones actualmente disponibles:\nTraducci\xF3n
+      de palabras y palabras inteligentes en tablas de cadena;"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 137651236864
+    m_Localized: "Kryga Denis, tambi\xE9n conocido como Captainkryga"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 4989550304630407197
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 0030a74708000000

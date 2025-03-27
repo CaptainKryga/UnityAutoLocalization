@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Strings_de
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: de
+  m_SharedData: {fileID: 11400000, guid: 873b2ceee5e6b7644af32f8fc74cf6cc, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 4989550304630407195
+  m_TableData:
+  - m_Id: 35561877504
+    m_Localized: 
+    m_Metadata:
+      m_Items:
+      - rid: 4989550304630407195
+  - m_Id: 76078854144
+    m_Localized: "UNITY Auto Lokalisierung \U0001F30E\nKompatibilit\xE4t Einheit
+      2022.3.16f1 oder hoch\nMit diesem Tool k\xF6nnen Sie das Spiel in andere Sprachen
+      \xFCbersetzen, indem Sie kostenlose Google -\xDCbersetzer und die Lokalisierung
+      der Einheit verwenden.\nWo soll ich anfangen?\nSie k\xF6nnen das Plugin \xFCber
+      den Unity -Paket -Manager mit dem Link erhalten:\nFunktionen derzeit verf\xFCgbar:\n\xDCbersetzung
+      von W\xF6rtern und intelligenten W\xF6rtern in String -Tabellen;"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 137651236864
+    m_Localized: Kryga Denis alias Captainkryga
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 4989550304630407195
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 0030a74708000000
