@@ -1,4 +1,4 @@
-# Unity auto localization
+# Unity auto localization 🌎
 ## Compatibility Unity 2022.3.16f1 or high
 
 This tool allows you to translate the game into other languages, using free google translators and unity localization.
