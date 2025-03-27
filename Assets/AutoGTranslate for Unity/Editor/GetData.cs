@@ -27,11 +27,13 @@ namespace UnityLocalization.Editor
 			FileInfo[] files = dir.GetFiles("*.asset");
 			foreach (FileInfo file in files) 
 			{
-				string pathToFile = file.FullName.Replace(Application.dataPath, "Assets");
-
-				StringTableCollection temp = AssetDatabase.LoadAssetAtPath<StringTableCollection>(pathToFile);
+				string pathToFile = file.FullName;
+				pathToFile = "Assets" + pathToFile.Remove(0, Application.dataPath.Length);
+				StringTableCollection temp = (StringTableCollection) (AssetDatabase.LoadAssetAtPath(pathToFile,typeof(StringTableCollection)));
 				if (temp)
+				{
 					list.Add(temp);
+				}
 			}
 		}
 	}

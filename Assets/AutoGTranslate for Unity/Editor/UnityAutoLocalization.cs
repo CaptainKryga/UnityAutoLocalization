@@ -8,7 +8,7 @@ namespace UnityLocalization.Editor
 	public class UnityAutoLocalization : EditorWindow
 	{
 		//array tables
-		private StringTableCollection[] _tables;
+		[SerializeField] private StringTableCollection[] _tables;
 
 		//lang selected bools
 		private bool[] _boolLang = new bool[256];
@@ -38,6 +38,11 @@ namespace UnityLocalization.Editor
 			GUILayout.Label("Auto Translate", EditorStyles.boldLabel);
 			_tables = GetData.GetAllStringTableCollection();
 
+			Debug.Log(_tables.Length);
+			
+			// if (_tables.Length == 0)
+			// 	return;
+			
 			//2 update get all string table collections
 			if (GUILayout.Button("Update List Localization Table's"))
 			{
@@ -55,6 +60,7 @@ namespace UnityLocalization.Editor
 			
 			//4 dropdown default language setup table
 			List<string> options2 = new List<string>();
+			// Debug.Log(_tables.Length);
 			for (int x = 0; x < _tables[_selectedTable].StringTables.Count; x++)
 			{
 				string code = _tables[_selectedTable].StringTables[x].LocaleIdentifier.Code.ToUpper();
